@@ -1,0 +1,10 @@
+/* barva pozadí jen dočasné do dodělání layoutu */
+
+body {
+  background-color: black;
+  color: #ffffff;
+}
+
+.text {
+  background-color: #283e50;
+}
