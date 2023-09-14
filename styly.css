@@ -33,6 +33,7 @@ img {
   height: 295px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  margin-bottom: -7px;
 }
 
 .nadpis {
@@ -47,7 +48,6 @@ img {
   font-size: 18px;
   font-weight: lighter;
   height: 350px;
-
 }
 
 .buttons {
