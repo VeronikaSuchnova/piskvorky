@@ -14,6 +14,7 @@ body {
   background-attachment: fixed;
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 
 .box {
@@ -22,59 +23,65 @@ body {
   align-items: center;
   color: #ffffff;
   font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  width: 450px;
+  max-width: 30%;
   margin-top: 15vh;
   margin-bottom: 30vh;
 }
 
 img {
-  width: 450px;
-  height: 295px;
+  width: 100%;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   margin-bottom: -7px;
 }
 
-.nadpis {
-  font-family: 'Lobster', cursive;
-  font-size: 48px;
-}
-
-.popis {
+.box__text {
+  display: flex;
+  flex-direction: column;
   background-color: #283e50;
-  padding: 15px 15px;
   text-align: center;
-  font-size: 18px;
+}
+
+.box__text--title {
+  font-family: 'Lobster', cursive;
+  font-size: 45px;
+
+}
+
+.box__text--description {
+  font-size: 16px;
   font-weight: lighter;
-  height: 350px;
+  padding: 10px;
+  line-height: 1.5;
 }
 
-.buttons {
+.box__buttons {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  width: 450px;
-  font-size: 18px;
+  font-size: 16px;
+  width: 100%;
 }
 
 
-.pravidla {
+.box__buttons--rules {
   background-color: #1fcca4;
   padding: 15px;
-
 }
 
-.pravidla:hover {
+.box__buttons--rules:hover {
   background-color: #1cbb96;
 }
 
-.hra {
+.box__buttons--play {
   background-color: #0197f6;
   padding: 15px;
   border-top: solid 0.5px black;
 }
 
-.hra:hover {
+.box__buttons--play:hover {
   background-color: #0090e9;
+
 }
 
 a {
