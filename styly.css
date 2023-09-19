@@ -66,7 +66,7 @@ img {
 
 .box__buttons--rules {
   background-color: #1fcca4;
-  padding: 15px;
+  padding: 15px 0px 15px 0px;
 }
 
 .box__buttons--rules:hover {
@@ -75,8 +75,9 @@ img {
 
 .box__buttons--play {
   background-color: #0197f6;
-  padding: 15px;
   border-top: solid 0.5px black;
+  padding: 15px 0px 15px 0px;
+
 }
 
 .box__buttons--play:hover {
