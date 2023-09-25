@@ -24,7 +24,7 @@ body {
   color: #ffffff;
   font-family: Helvetica, Arial, sans-serif;
   max-width: 30%;
-  margin-top: 15vh;
+  margin-top: 10vh;
   margin-bottom: 30vh;
 }
 
@@ -106,7 +106,7 @@ Kolečko: circle.svg
 
 3. Uprav html a css (Úzká obrazovka, Širší obrazovka) podle obrázků v odkazu.
 
-4. V tomto úkolu nebudeš potřebovat @media query. Hlavnímu obsahu nastav maximální šířku pomocí max-width: 80vmin. Stránka se tak bude lépe přizpůsobovat širokoúhlým obrazovkám i telefonům na výšku.
+4. V tomto úkolu nebudeš potřebovat @media query. Hlavnímu obsahu nastav maximální šířku pomocí max-width: 80vmin. Stránka se tak bude lépe přizpůsobovat širokoúhlým obrazovkám i telefonům na výšku. --> NASTAVENO PRO .container_game
 
 5. Pro tlačítka v pravém horním rohu použij html prvek <a>. První tlačítko nasměru na úvodní stránku a druhé na hra.html, aby znovu načetlo právě zobrazenou stránku. Nezapomeň na stejné zatmavení po najetí myši jako u předchozí stránky.
 
@@ -114,12 +114,13 @@ Kolečko: circle.svg
 
 Poznámky: (a) V pozdějších úkolech budeš měnit ikonku právě hrajícího hráče pomocí javascriptu. Zatím zobraz staticky, jen s použitím html a css, kroužek. (b) Efekty po najetí myši se většinou týkají i stavu :focus, aby se stránka dala ovládat například i z klávesnice.
 
-/* Styly pro "playing field" = board */
+/* Styly pro "playing field" = .board */
 
 .container_game {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  max-width: 80vmin;
 }
 
 .header_game {
@@ -131,7 +132,34 @@ Poznámky: (a) V pozdějších úkolech budeš měnit ikonku právě hrajícího
 .title_game {
   color: white;
   font-family: 'Lobster', cursive;
-  font-size: 3rem;
+  font-size: 4.5rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.menu_player {
+  display: flex;
+}
+
+.menu_player_now {
+  color: #ffffff;
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.menu_circle {
+  width: 1.8rem;
+  align-self: center;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .board {
@@ -139,6 +167,7 @@ Poznámky: (a) V pozdějších úkolech budeš měnit ikonku právě hrajícího
   flex-wrap: wrap;
   width: 500px;
   margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .cell {
