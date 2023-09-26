@@ -108,7 +108,7 @@ Kolečko: circle.svg
 
 4. V tomto úkolu nebudeš potřebovat @media query. Hlavnímu obsahu nastav maximální šířku pomocí max-width: 80vmin. Stránka se tak bude lépe přizpůsobovat širokoúhlým obrazovkám i telefonům na výšku. --> NASTAVENO PRO .container_game
 
-5. Pro tlačítka v pravém horním rohu použij html prvek <a>. První tlačítko nasměru na úvodní stránku a druhé na hra.html, aby znovu načetlo právě zobrazenou stránku. Nezapomeň na stejné zatmavení po najetí myši jako u předchozí stránky.
+5. Pro tlačítka v pravém horním rohu použij html prvek <a>. První tlačítko nasměruj na úvodní stránku a druhé na hra.html, aby znovu načetlo právě zobrazenou stránku. --> DONE; Nezapomeň na stejné zatmavení po najetí myši jako u předchozí stránky. --> DONE
 
 6. Pro jednotlivá políčka, celkem jich je 100, použij html prvek <button>. Po najetí myši by se měl lehce rozsvítit.
 
@@ -132,7 +132,7 @@ Poznámky: (a) V pozdějších úkolech budeš měnit ikonku právě hrajícího
 .title_game {
   color: white;
   font-family: 'Lobster', cursive;
-  font-size: 4.5rem;
+  font-size: 4.5em;
 }
 
 .menu {
@@ -144,22 +144,57 @@ Poznámky: (a) V pozdějších úkolech budeš měnit ikonku právě hrajícího
 
 .menu_player {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+
 }
 
 .menu_player_now {
   color: #ffffff;
   font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 0;
 }
 
 .menu_circle {
-  width: 1.8rem;
+  width: 1.8em;
   align-self: center;
   margin-left: 10px;
   margin-top: 10px;
+}
+
+.menu_buttons {
+  display: flex;
+  width: 8em;
+  height: 4em;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.button--home {
+  width: 2.5em;
+  background-color: #1fcca4;
+  padding: 0.5em;
+  border-radius: 18%;
+}
+
+.button--home:hover {
+  background-color: #1cbb96;
+}
+
+.button--restart {
+  width: 2.5em;
+  background-color: #0197f6;
+  padding: 0.5em;
+  border-radius: 18%;
+
+}
+
+.button--restart:hover {
+  background-color: #0090e9;
 }
 
 .board {
