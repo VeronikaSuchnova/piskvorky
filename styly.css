@@ -45,13 +45,13 @@ img {
 
 .box__text--title {
   font-family: 'Lobster', cursive;
-  font-size: 45px;
+  font-size: 3em;
 
 
 }
 
 .box__text--description {
-  font-size: 16px;
+  font-size: 1.1em;
   font-weight: lighter;
   padding: 10px;
   line-height: 1.5;
@@ -213,6 +213,7 @@ Poznámky: (a) V pozdějších úkolech budeš měnit ikonku právě hrajícího
 }
 
 .cell {
+  cursor: pointer;
   width: 50px;
   height: 50px;
   font-size: 20px;
