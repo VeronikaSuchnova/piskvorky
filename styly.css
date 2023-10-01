@@ -142,7 +142,6 @@ Poznámky: (a) V pozdějších úkolech budeš měnit ikonku právě hrajícího
 .menu {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
 }
 
