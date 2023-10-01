@@ -179,9 +179,9 @@ Poznámky: (a) V pozdějších úkolech budeš měnit ikonku právě hrajícího
 }
 
 .button--home {
-  width: 2.5em;
+  width: 1.5em;
   background-color: #1fcca4;
-  padding: 0.5em;
+  padding: 0.8em;
   border-radius: 18%;
 }
 
@@ -191,9 +191,9 @@ Poznámky: (a) V pozdějších úkolech budeš měnit ikonku právě hrajícího
 }
 
 .button--restart {
-  width: 2.5em;
+  width: 1.5em;
   background-color: #0197f6;
-  padding: 0.5em;
+  padding: 0.8em;
   border-radius: 18%;
 
 }
