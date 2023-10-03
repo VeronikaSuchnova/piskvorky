@@ -24,9 +24,9 @@ body {
   align-items: center;
   color: #ffffff;
   font-family: Helvetica, Arial, sans-serif;
-  max-width: 30%;
-  margin-top: 10vh;
-  margin-bottom: 30vh;
+  max-width: 27vmax;
+  margin-top: 2.5vh;
+  margin-bottom: 25vh;
 }
 
 img {
