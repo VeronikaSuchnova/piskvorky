@@ -6,13 +6,12 @@ const played = (event) => {
     event.target.classList.toggle('board__field--circle');
     currentPlayer = 'cross';
     signOfPlayer.src = 'ikonky/circle.svg';
-    event.target.disabled = true;
   } else {
     event.target.classList.toggle('board__field--cross');
     currentPlayer = 'circle';
     signOfPlayer.src = 'ikonky/cross.svg';
-    event.target.disabled = true;
   }
+  event.target.disabled = true;
 };
 
 const cell1Elm = document.querySelector('.cell:nth-child(1)');
