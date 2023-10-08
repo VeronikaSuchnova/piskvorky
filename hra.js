@@ -3,11 +3,11 @@ const signOfPlayer = document.querySelector('.menu_circle');
 
 const played = (event) => {
   if (currentPlayer === 'circle') {
-    event.target.classList.toggle('board__field--circle');
+    event.target.classList.toggle('board__field--cross');
     currentPlayer = 'cross';
     signOfPlayer.src = 'ikonky/circle.svg';
   } else {
-    event.target.classList.toggle('board__field--cross');
+    event.target.classList.toggle('board__field--circle');
     currentPlayer = 'circle';
     signOfPlayer.src = 'ikonky/cross.svg';
   }
