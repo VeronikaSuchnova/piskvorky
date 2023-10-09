@@ -1,17 +1,17 @@
 let currentPlayer = 'circle';
 const signOfPlayer = document.querySelector('.menu_circle');
 
-const played = (event) => {
+const played = (click) => {
   if (currentPlayer === 'circle') {
-    event.target.classList.toggle('board__field--cross');
+    click.target.classList.add('board__field--circle');
     currentPlayer = 'cross';
-    signOfPlayer.src = 'ikonky/circle.svg';
-  } else {
-    event.target.classList.toggle('board__field--circle');
-    currentPlayer = 'circle';
     signOfPlayer.src = 'ikonky/cross.svg';
+  } else {
+    click.target.classList.add('board__field--cross');
+    currentPlayer = 'circle';
+    signOfPlayer.src = 'ikonky/circle.svg';
   }
-  event.target.disabled = true;
+  click.target.disabled = true;
 };
 
 const cell1Elm = document.querySelector('.cell:nth-child(1)');
