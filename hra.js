@@ -14,32 +14,7 @@ const played = (click) => {
   click.target.disabled = true;
 };
 
-const cell1Elm = document.querySelector('.cell:nth-child(1)');
-cell1Elm.addEventListener('click', played);
-
-const cell2Elm = document.querySelector('.cell:nth-child(2)');
-cell2Elm.addEventListener('click', played);
-
-const cell3Elm = document.querySelector('.cell:nth-child(3)');
-cell3Elm.addEventListener('click', played);
-
-const cell4Elm = document.querySelector('.cell:nth-child(4)');
-cell4Elm.addEventListener('click', played);
-
-const cell5Elm = document.querySelector('.cell:nth-child(5)');
-cell5Elm.addEventListener('click', played);
-
-const cell6Elm = document.querySelector('.cell:nth-child(6)');
-cell6Elm.addEventListener('click', played);
-
-const cell7Elm = document.querySelector('.cell:nth-child(7)');
-cell7Elm.addEventListener('click', played);
-
-const cell8Elm = document.querySelector('.cell:nth-child(8)');
-cell8Elm.addEventListener('click', played);
-
-const cell9Elm = document.querySelector('.cell:nth-child(9)');
-cell9Elm.addEventListener('click', played);
-
-const cell10Elm = document.querySelector('.cell:nth-child(10)');
-cell10Elm.addEventListener('click', played);
+const cellElm = document.querySelectorAll('.cell');
+cellElm.forEach((square) => {
+  square.addEventListener('click', played);
+});
