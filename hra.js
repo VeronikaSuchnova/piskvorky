@@ -29,8 +29,11 @@ const played = (click) => {
   // console.log(playingField);
   const winner = findWinner(playingField);
   if (winner === 'o' || winner === 'x') {
-    alert(`⭕️❌ Vyhrál hráč se symbolem "${winner}", gratulka❣️🎊`);
-    location.reload();
+    const alertFce = () => {
+      alert(`⭕️❌ Vyhrál hráč se symbolem "${winner}", gratulka❣️🎊`);
+      location.reload();
+    };
+    setTimeout(alertFce, 125);
   }
 };
 
