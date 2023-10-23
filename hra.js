@@ -5,7 +5,7 @@ const signOfPlayer = document.querySelector('.menu_circle');
 const cellElm = document.querySelectorAll('.cell');
 
 // change of the signs of the players on the playing field - cross/circle
-const played = (click) => {
+const played = async (click) => {
   if (currentPlayer === 'circle') {
     click.target.classList.add('board__field--circle');
     currentPlayer = 'cross';
@@ -34,6 +34,45 @@ const played = (click) => {
       location.reload();
     };
     setTimeout(alertFce, 125);
+  }
+
+  if (currentPlayer === 'cross') {
+    cellElm.forEach((square) => {
+      square.disabled = true;
+    });
+    const response = await fetch(
+      'https://piskvorky.czechitas-podklady.cz/api/suggest-next-move',
+      {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify({
+          board: playingField,
+          player: 'x', // Hledá tah pro křížek.
+        }),
+      },
+    );
+
+    const data = await response.json();
+
+    // console.log('data', data);
+
+    const { x, y } = data.position;
+    const field = cellElm[x + y * 10];
+
+    cellElm.forEach((square) => {
+      if (
+        !(
+          square.classList.contains('board__field--circle') ||
+          square.classList.contains('board__field--cross')
+        )
+      ) {
+        square.disabled = false;
+      }
+    });
+
+    field.click();
   }
 };
 
